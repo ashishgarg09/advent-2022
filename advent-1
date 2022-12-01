@@ -1,0 +1,24 @@
+with open("1.input") as f:
+    sum1=[]
+    line1=0
+    for line in f:
+        if line not in ['\n', '\r', '\r\n']:
+            line2 = int(line)
+            line1 = line1 + line2
+        else:
+            sum1.append(line1)
+            line1=0
+            continue
+    sum1.append(line1)
+    print(sum1)
+    index=0
+    max= sum1[0]
+    for i in range(1,len(sum1)):
+       if sum1[i] > max:
+          max=sum1[i]
+          index=i
+    h = sum1[index]
+    print("Highest calories")
+    print(h)
+    print("elf no.")
+    print(index+1)
