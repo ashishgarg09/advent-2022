@@ -1,0 +1,26 @@
+#############Rock paper Sessior ##############
+with open("2.input") as f:
+    var1=0
+    total=0
+    var2= 0
+    total2 = 0
+    for line in f:
+        input = line.rstrip('\n')
+        input1=input.split(' ')
+        Result = {'X': {"A": "4", "B": "1", "C": "7"},
+             'Y': {"A": "8", "B": "5", "C": "2"},
+             'Z': {"A": "3", "B": "9", "C": "6"}}
+        #####second part ################
+        Result2 = {'X': {"A": "3", "B": "1", "C": "2"},
+                  'Y': {"A": "4", "B": "5", "C": "6"},
+                  'Z': {"A": "8", "B": "9", "C": "7"}}
+
+        
+        var1=(Result[input1[1]][input1[0]])
+        var2=(Result2[input1[1]][input1[0]])
+        var1=int(var1)
+        var2 = int(var2)
+        total += var1
+        total2 += var2
+    print(total)
+    print(total2)
