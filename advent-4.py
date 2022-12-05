@@ -35,6 +35,7 @@ with open("4.input") as f:
         if((leng1>leng2) & (leng2==lena1)) or ((leng2>leng1) & (leng1==lena1)) or ((leng1==leng2) & (leng1==lena1)):
 
             total += 1
+      ###part two  logic#########      
         if(lena1>0):
             total1 += 1
 print('fully overlap count', total)
