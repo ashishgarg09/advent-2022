@@ -24,7 +24,7 @@ with open("3.input") as f:
         lines.append(line.strip())
         linenum1=linenum+1
         ll=len(lines)
-print('llv',  ll)
+
 for i in range(linenum):
      if i%3==0:
          a1 = list(set(lines[i]) & set(lines[i+1]) & set(lines[i+2]))
