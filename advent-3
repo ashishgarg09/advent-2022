@@ -1,0 +1,37 @@
+total=0
+value=0
+with open("3.input") as f:
+    for line in f:
+        line=line.replace(" ", "")
+        line = line.strip()
+        line=str(line)
+        firstpart, secondpart = line[:len(line) // 2], line[len(line) // 2:]
+        a=list(set(firstpart)&set(secondpart))
+        c_no=(ord(a[0]))
+        if c_no>64 and c_no<91:
+            value=c_no-38
+        elif c_no>96 and c_no<123:
+            value=c_no-96
+        total += value
+    print(total)
+
+   ############Second PArt
+with open("3.input") as f:
+    lines=[]
+    ll=0
+    total1=0
+    for linenum, line in enumerate(f):
+        lines.append(line.strip())
+        linenum1=linenum+1
+        ll=len(lines)
+print('llv',  ll)
+for i in range(linenum):
+     if i%3==0:
+         a1 = list(set(lines[i]) & set(lines[i+1]) & set(lines[i+2]))
+         c_no1 = (ord(a1[0]))
+         if c_no1 > 64 and c_no1 < 91:
+             value1 = c_no1 - 38
+         elif c_no1 > 96 and c_no1 < 123:
+             value1 = c_no1 - 96
+         total1 += value1
+print(total1)
